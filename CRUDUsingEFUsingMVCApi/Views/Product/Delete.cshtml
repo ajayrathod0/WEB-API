@@ -1,0 +1,139 @@
+﻿@model CRUDUsingEFUsingMVCApi.Models.Product
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AvailableQuantity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AvailableQuantity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CategoryId)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+            <div>
+                <label style="color:red">@ViewBag.Massage</label>
+            </div>
+        }
+    </div>
+
+
+
+
+@*@model CRUDUsingEFUsingMVCApi.Models.Product
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.Id)
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="button" id="btnDelete" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+        <div>
+            <label style="color:red">@ViewBag.Massage</label>
+            <label id="message" class="text-danger"></label>
+        </div>
+    }
+</div>
+
+
+<script>
+    $(function () {
+        $('#btnDelete').click(function () {
+            // api call => delete => delete product
+            var id = $('#Id').val();
+
+            $.ajax({
+                url: 'http://localhost:54360/api/product/' + id,
+                type: 'delete',
+                success: function (response) {
+                    // debugger;
+                    $('#message')
+                        .text('product deleted successfully. Product id is ' +
+                            id);
+                    window.location.href = '/product/index';
+                },
+                error: function (reason) {
+                    // debugger;
+                    $('#message').text('product deletion failed.');
+                }
+            });
+        });
+    });
+</script>*@

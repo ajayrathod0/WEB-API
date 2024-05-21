@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f313dc66d4d2429e8ab93c8afe17a675" Name="Diagram1">
+        <EntityTypeShape EntityType="B22APIDBModel.Product" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="B22APIDBModel.Category" Width="1.5" PointX="0.75" PointY="4" />
+        <AssociationConnector Association="B22APIDBModel.FK__Product__Categor__49C3F6B7" />
+        <EntityTypeShape EntityType="B22APIDBModel.User" Width="1.5" PointX="3.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
